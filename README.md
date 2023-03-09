@@ -1,2 +1,2 @@
-# Data_Structure-Algorithms
+# C-Essentials
 Lesson notes and code examples
