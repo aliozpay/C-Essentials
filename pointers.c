@@ -1,8 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
+struct rectangle{
+    int a;
+    int b;
+
+};
 int main()
 {
-
     /*
         Example 1 : Storing adresses of a variable
     */
@@ -37,6 +41,8 @@ int main()
     lengthArray : Length of the defined array
     we used sizeof(int) because of we wanted to array that have int values. If we want to create an array that have float, double or 
     char values, we can use sizeof(double) or size of(char) instead of sizeof(int).
+
+    !!!Don't forget the give back the memory space you took using the free() function
  */
 int *p4;
 int lengthArray = 5;
@@ -51,4 +57,23 @@ printf("Ex4: Creating an array using heap memory\n");
  {
     printf("Values of the defined array over the heap are : %d\n",p4[j]);
  }
+ free(p4);
+
+
+/*
+    Example5: Comparising size of the pointer created from different types
+ */
+
+int *p5;
+double *p6;
+float *p7;
+char *p8;
+struct rectangle *p9;
+
+printf("Ex5: Comparasing size of the pointers\n");
+printf("Size of int pointer: %d\n",sizeof(p5));
+printf("Size of double pointer: %d\n",sizeof(p6));
+printf("Size of float pointer: %d\n",sizeof(p7));
+printf("Size of char pointer: %d\n",sizeof(p8));
+printf("Size of struct pointer: %d\n",sizeof(p9));
 }
